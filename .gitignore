@@ -1,0 +1,53 @@
+# =======================================
+# Materi Kuliah, Modul & Dokumen Tugas
+# =======================================
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.xlsx
+*.xls
+*.zip
+*.rar
+*.7z
+
+# Abaikan folder materi atau catatan pribadi
+materi/
+modul/
+slide/
+docs/private/
+draft/
+
+# =======================================
+# Web Dev: Dependency & Database Lokal
+# =======================================
+node_modules/
+vendor/
+
+# Environment, secret API keys & credentials
+.env
+.env.*
+!.env.example
+
+# File database lokal / dump SQL
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+
+# =======================================
+# Editor, IDE & System Junk (Windows/Mac)
+# =======================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Cache & OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.log

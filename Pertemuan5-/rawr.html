@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rawrcss.css">
+    <title>Belajar Table</title>
+   
 </head>
 <body>
     <table border="1"><!-- border="1" untuk menambahkan garis tepi pada tabel -->
@@ -17,27 +19,84 @@
             <td>Baris 2 sel 1</td>
             <td>Baris 2 sel 2</td>
         </tr>
-        <table border="1">
-            <caption>Daftar table</caption>
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>NIM</th>
-                <th>Jurusan</th>
-            </tr>
-            <tr>
+        <table border="1" align="center" width="500" height="200" cellpading="3" cellspacing="3"> <!-- cellpading untuk ngatur batas dalam sel sedangkan cellspacing untuk ngatur jarak antar sel -->
+                <th rowspan="2" width="50" bgcolor = "lightgray">No</th>
+                <th rowspan="2" width="150" bgcolor="lightgray">Nama</th>
+                <th rowspan="2" width="100" bgcolor="lightgray">NIM</th>
+                <th rowspan="2" width="150" bgcolor="lightgray">Jurusan</th>
+                <th colspan="2" width="150" bgcolor="lightgray">Nilai</th>
+            </tr><th width="75" bgcolor="lightgray">UTS</th><th width="75" bgcolor="lightgray">UAS</th></tr>
+            <tr bgcolor="#00FF00"   >
+                
                 <td>1</td>
                 <td>Malik</td>
                 <td>252210057</td>
-                <td>Sistem Informatsi</td>
+                <td>Sistem Informasi</td>
+                <td>85</td>
+                <td>75</td>
             </tr>
-            <tr>
+            <tr bgcolor="#FFFF00">
+                
                 <td>2</td>
-                <td>Rizki</td>
+                <td>Jokowi</td>
                 <td>252210058</td>
-                <td>Sistem Informatsi</td>
+                <td>Sistem Informasi</td>
+                <td>90</td>
+                <td>80</td>
             </tr>
         </table>
-    </table>
+ </table>
+        <form>
+            nama depan :<br>
+            <input type="text" name="first_name"><br>
+            nama belakang :<br>
+            <input type="text" name="last_name"><br>
+        </form>
+        <!--checkbox input-->
+        <form>
+            <input type="checkbox" name="a" value="Pilihan 1"> Pilihan 1<br>
+            <input type="checkbox" name="b" value="Pilihan 2"> Pilihan 2<br>
+            <input type="checkbox" name="c" value="Pilihan 3"> Pilihan 3<br>
+        </form>
+        <!--radio button input-->
+        <form>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+        </form>
+        <!--combobox input-->
+        <form>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </form>
+        <!--textarea input-->
+        <form>
+            <textarea name="message" rows="10" cols="50"> contoh dari textarea</textarea>
+        </form>
+        <!--Button-->
+        <form>
+            <input type="button" value="Click Me!" onclick="alert('Button clicked!')">
+        </form>
+        <!--submit button-->
+        <form>
+            <input type="submit" value="Submit">
+        </form>
+   
+
+        <form>
+            <fieldset style="width: 300px;">
+                <legend>Login</legend>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label><br><br>
+                <input type="submit" value="Login">
+            </fieldset>
+        </form>
 </body>
 </html>
